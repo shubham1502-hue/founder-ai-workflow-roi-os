@@ -284,3 +284,11 @@ MIT License. See [LICENSE](LICENSE).
 ## Built by
 
 Built by Shubham Singh, a founder-facing operator focused on RevOps, GTM systems, startup metrics, and AI workflows for early-stage teams.
+
+## Use this in your company
+
+Fork it, replace the sample inputs with your company context, and run the workflow. Start with the main output listed in the Quick Start section. Keep private data out of public forks.
+
+## If you are a Founder's Office candidate
+
+Use this repo to understand how a founder-facing operator turns messy inputs into decisions, cadence, and execution artifacts. Fork it, adapt it to a real company example, and write a short case note explaining what changed.

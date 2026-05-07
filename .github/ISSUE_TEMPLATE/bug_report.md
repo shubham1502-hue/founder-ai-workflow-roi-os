@@ -12,9 +12,9 @@ Describe the bug clearly.
 
 ## Steps to reproduce
 
-1. 
-2. 
-3. 
+1.
+2.
+3.
 
 ## Expected behavior
 
