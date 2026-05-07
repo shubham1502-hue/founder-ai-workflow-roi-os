@@ -1,0 +1,232 @@
+# Founder AI Workflow ROI OS
+
+Decide which workflows to automate with AI, which to hire for, which to outsource, and which to leave manual.
+
+Founder AI Workflow ROI OS helps founders use AI where it creates real leverage. It prevents random AI experimentation by ranking workflows by ROI, risk, payback period, and operating priority. It also helps founders stay lean without blindly avoiding hiring.
+
+This is an offline-first decision system. It does not require a paid API, does not require an LLM, and does not send your workflow data anywhere. Replace one CSV, edit one YAML file, run one command, and read the roadmap.
+
+## The founder problem
+
+Founders know they should use AI and stay lean, but the hard question is where AI actually creates leverage. Most teams have scattered workflows across sales, customer success, operations, finance, hiring, reporting, product feedback, and founder admin. Some workflows are worth automating. Some need a hire. Some should be outsourced. Some should stay manual.
+
+This repo turns workflow chaos into a ranked automation roadmap.
+
+## What this repo does
+
+- Maps company workflows
+- Calculates time spent
+- Estimates monthly cost
+- Estimates AI automation savings
+- Calculates payback period
+- Scores automation priority
+- Recommends automate vs hire vs outsource vs keep manual
+- Generates an AI implementation backlog
+- Creates a founder-ready AI ROI memo
+- Creates an AI operating policy
+
+## What a founder gets in 10 minutes
+
+- Ranked workflows to automate now
+- Workflows to pilot with AI
+- Workflows that need a hire
+- Workflows to outsource
+- Workflows to avoid automating
+- Estimated monthly savings
+- AI implementation roadmap
+- Founder AI ROI memo
+
+## Before and after
+
+Before:
+
+- Scattered workflows
+- Random AI experiments
+- No ROI clarity
+- Manual work hidden across the team
+- Hiring and automation decisions made by gut feel
+
+After:
+
+- Workflow inventory
+- ROI scorecard
+- Automation priority matrix
+- Hire vs automate decisions
+- AI implementation backlog
+- Founder-ready AI roadmap
+
+## Who this is for
+
+- Early-stage founders
+- Founder's Office teams
+- BizOps operators
+- RevOps operators
+- Startup generalists
+- Seed-stage teams
+- AI-first teams trying to stay lean
+
+## Quick start
+
+1. Fork the repo.
+2. Clone the repo.
+
+```bash
+git clone https://github.com/shubham1502-hue/founder-ai-workflow-roi-os.git
+cd founder-ai-workflow-roi-os
+```
+
+3. Install dependencies.
+
+```bash
+make install
+```
+
+4. Edit `config/company_profile.yml`.
+5. Replace `data/sample_workflows.csv` with your own workflow inventory.
+6. Run the system.
+
+```bash
+make run
+```
+
+7. Review `outputs/`.
+
+## How to fork and use this for your company
+
+1. Click Fork on GitHub.
+2. Rename the repo if needed.
+3. Replace `data/sample_workflows.csv` with your company workflow inventory.
+4. Edit `config/company_profile.yml`.
+5. Edit `config/scoring_rules.yml` if your cost, risk, or priority assumptions differ.
+6. Run `make run`.
+7. Review `outputs/founder_ai_roi_memo.md` first.
+8. Review `outputs/workflow_roi_scorecard.csv` second.
+9. Optional: connect outputs to Google Sheets, Notion, Airtable, Linear, Asana, ClickUp, HubSpot, or your internal ops tracker.
+
+Non-technical path:
+
+- Replace one CSV
+- Edit one YAML file
+- Run one command
+- Read one memo
+
+## Where this fits in the Founder OS
+
+Use `founder-ai-workflow-roi-os` to decide where AI should create leverage across the company.
+
+- Use `founder-weekly-operating-review-agent` to roll AI leverage work into the weekly operating review.
+- Use `founder-os-revenue-engine` to connect automation work to revenue bottlenecks.
+- Use `founder-led-sales-call-os` for post-call sales intelligence.
+- Use `ai-gtm-command-center` for pre-call GTM workflows.
+- Use `founder-os` as the umbrella operating system.
+
+Related repos:
+
+- [founder-os](https://github.com/shubham1502-hue/founder-os)
+- [founder-weekly-operating-review-agent](https://github.com/shubham1502-hue/founder-weekly-operating-review-agent)
+- [founder-os-revenue-engine](https://github.com/shubham1502-hue/founder-os-revenue-engine)
+- [founder-led-sales-call-os](https://github.com/shubham1502-hue/founder-led-sales-call-os)
+- [ai-gtm-command-center](https://github.com/shubham1502-hue/ai-gtm-command-center)
+
+## Input format
+
+The input CSV must include every column below.
+
+| Column | Description |
+| --- | --- |
+| `workflow_id` | Stable ID such as `WF-001`. |
+| `function` | Function that owns the workflow, such as Sales, Finance, or RevOps. |
+| `workflow_name` | Short human-readable workflow name. |
+| `owner_role` | Role accountable for the workflow today. |
+| `current_tooling` | Tools currently used to complete the workflow. |
+| `workflow_description` | Plain-language description of the work. |
+| `frequency_per_month` | Number of times this workflow runs each month. |
+| `avg_time_minutes_per_run` | Average minutes spent each time it runs. |
+| `people_involved` | Number of people typically involved per run. |
+| `error_rate_percent` | Estimated percent of runs with errors, rework, or misses. |
+| `monthly_volume` | Count of units processed each month, such as tickets, calls, leads, or invoices. |
+| `business_impact` | 1 to 5 score for company impact. |
+| `customer_impact` | 1 to 5 score for customer impact. |
+| `data_sensitivity` | Low, medium, or high sensitivity. |
+| `process_variability` | Low, medium, or high variability. |
+| `current_pain` | Low, medium, or high pain today. |
+| `current_cost_signal` | Low, medium, or high cost signal. |
+| `automation_idea` | Practical idea for AI assistance or automation. |
+| `requires_human_judgment` | Yes or no. |
+| `current_status` | Documented, partially_documented, ad_hoc, chaotic, or similar status. |
+
+## Output files
+
+- `outputs/workflow_roi_scorecard.csv`: ROI math, savings, payback period, priority score, score band, and recommendation.
+- `outputs/automation_priority_matrix.csv`: Impact, effort, risk, quadrant, and recommended timing.
+- `outputs/hire_vs_automate_decisions.csv`: Recommendation, reason, risks, owner, next step, and confidence.
+- `outputs/ai_implementation_backlog.csv`: Action backlog grouped into implementation phases.
+- `outputs/founder_ai_roi_memo.md`: Founder-ready memo for deciding what to do next.
+- `outputs/ai_workflow_roadmap.md`: Phased roadmap for quick wins, pilots, deeper automation, and hiring or outsourcing decisions.
+- `outputs/ai_operating_policy.md`: Guardrails for AI use, human approval, data sensitivity, review cadence, and owner responsibilities.
+
+## Example founder workflow
+
+- Friday: list workflows causing drag.
+- Monday: run the system.
+- Tuesday: review quick wins.
+- Wednesday: assign AI pilots.
+- Thursday: review risks and human approval rules.
+- Friday: update the weekly operating review.
+
+## Customization guide
+
+Customize `config/company_profile.yml` to change:
+
+- Risk tolerance
+- Sensitive data categories
+- Functions to prioritize
+- Functions to avoid for now
+- Founder operating goals
+- Preferred tools
+
+Customize `config/scoring_rules.yml` to change:
+
+- Hourly cost assumptions
+- Scoring weights
+- Normalization thresholds
+- Automation cost assumptions
+- Automation coverage by complexity
+- Score bands
+- Decision notes
+
+Customize the code if you need deeper changes to:
+
+- Workflow functions
+- Decision logic
+- Backlog generation
+- Policy language
+- Reporting format
+
+## Why this matters
+
+This is not an AI demo. It is a decision system for founders trying to use AI without wasting time, creating risk, or automating the wrong work.
+
+## Roadmap
+
+- Google Sheets export
+- Notion export
+- Streamlit dashboard
+- AI-assisted workflow mapping
+- Zapier and Make.com automation templates
+- Slack workflow intake
+- Linear and Jira backlog sync
+- ROI tracking over time
+- AI tool registry
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+MIT License. See [LICENSE](LICENSE).
+
+## Built by
+
+Built by Shubham Singh, a founder-facing operator focused on RevOps, GTM systems, startup metrics, and AI workflows for early-stage teams.

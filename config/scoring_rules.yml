@@ -1,0 +1,46 @@
+# All weights are visible and editable. The system is deterministic.
+# Risk-related scores are converted into inverse scores before weighting:
+# lower risk creates a higher contribution to the priority score.
+weights:
+  time_saved: 0.17
+  workflow_frequency: 0.10
+  business_impact: 0.12
+  customer_impact: 0.10
+  error_reduction: 0.08
+  implementation_effort: 0.10
+  data_sensitivity_risk: 0.08
+  process_variability_risk: 0.08
+  human_judgment_risk: 0.07
+  cost_to_automate: 0.04
+  payback_period: 0.04
+  strategic_leverage: 0.12
+
+assumptions:
+  blended_hourly_cost: 85
+  default_setup_cost_low: 800
+  default_setup_cost_medium: 2500
+  default_setup_cost_high: 6500
+  default_maintenance_cost_percent: 0.08
+  automation_coverage_by_complexity:
+    low: 0.65
+    medium: 0.45
+    high: 0.25
+
+normalization_thresholds:
+  hours_saved_for_max_score: 7
+  frequency_per_month_for_max_score: 10
+  error_rate_percent_for_max_score: 20
+
+score_bands:
+  automate_now: "80 to 100"
+  pilot_first: "60 to 79"
+  document_first: "40 to 59"
+  keep_manual: "below 40"
+
+decision_notes:
+  automate_now: "High frequency, high time savings, low data risk, low variability."
+  run_ai_assisted_pilot: "High upside with medium risk or process ambiguity."
+  hire: "High judgment, high strategic importance, continuous ownership needed."
+  outsource: "Repetitive work with low strategic importance and manageable risk."
+  document_process_first: "Workflow is chaotic or undefined."
+  keep_manual_for_now: "Low frequency, high risk, or low savings."

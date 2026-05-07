@@ -1,0 +1,21 @@
+workflow_id,workflow_name,function,impact_score,effort_score,risk_score,priority_score,quadrant,recommended_timing
+WF-001,Compile weekly metrics pack,Reporting,81.0,55.0,39.5,71.2,Strategic bets,Next 30 days
+WF-002,Clean CRM lifecycle stages,RevOps,81.5,25.0,29.0,82.3,Quick wins,This week
+WF-003,Draft post-demo follow-up emails,Sales,72.6,55.0,57.5,66.4,Process first,Document in next 2 weeks
+WF-004,Summarize sales calls,Sales,80.5,25.0,29.0,83.1,Quick wins,This week
+WF-005,Prepare investor update draft,Founder Admin,57.7,85.0,78.5,38.6,Avoid for now,Do not automate yet
+WF-006,Draft customer success check-ins,Customer Success,77.5,55.0,57.5,68.5,Process first,Document in next 2 weeks
+WF-007,Onboard new customers,Customer Success,94.0,85.0,68.0,70.9,Process first,Document in next 2 weeks
+WF-008,Tag and route support tickets,Support,80.5,25.0,29.0,81.5,Quick wins,This week
+WF-009,Reconcile contractor invoices,Finance,46.9,55.0,68.0,46.1,Process first,Document in next 2 weeks
+WF-010,Prepare candidate scorecards,Hiring,61.8,85.0,78.5,45.9,Avoid for now,Do not automate yet
+WF-011,Update project trackers,Operations,63.5,25.0,29.0,73.9,Quick wins,This week
+WF-012,Generate founder weekly review notes,Reporting,81.0,55.0,57.5,67.0,Process first,Document in next 2 weeks
+WF-013,Analyze churn reasons,Product Feedback,90.4,85.0,68.0,63.8,Process first,Document in next 2 weeks
+WF-014,Route inbound leads,RevOps,68.7,25.0,18.5,77.1,Quick wins,This week
+WF-015,Prepare meeting notes,Founder Admin,63.0,25.0,29.0,73.2,Quick wins,This week
+WF-016,Build competitor briefs,Sales,59.7,85.0,57.5,49.9,Process first,Document in next 2 weeks
+WF-017,Prepare vendor renewal tracker,Operations,49.4,25.0,29.0,59.2,Strategic bets,Next 30 days
+WF-018,Create help center article drafts,Support,63.8,55.0,47.0,59.6,Strategic bets,Next 30 days
+WF-019,Prepare monthly burn variance notes,Finance,54.1,85.0,78.5,33.9,Avoid for now,Do not automate yet
+WF-020,Summarize feature requests,Product Feedback,83.5,55.0,57.5,72.6,Process first,Document in next 2 weeks

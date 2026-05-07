@@ -1,0 +1,21 @@
+workflow_id,function,workflow_name,monthly_hours_spent,estimated_monthly_cost,estimated_hours_saved,estimated_monthly_savings,estimated_setup_cost,estimated_monthly_maintenance_cost,payback_period_months,net_monthly_savings_after_maintenance,priority_score,roi_category,recommendation
+WF-001,Reporting,Compile weekly metrics pack,24.0,2040.0,10.8,918.0,2500.0,200.0,3.48,718.0,71.2,Pilot first,Run AI-assisted pilot
+WF-002,RevOps,Clean CRM lifecycle stages,16.0,1360.0,10.4,884.0,800.0,64.0,0.98,820.0,82.3,Automate now,Automate now
+WF-003,Sales,Draft post-demo follow-up emails,12.5,1062.5,5.62,477.7,2500.0,200.0,9.0,277.7,66.4,Pilot first,Hire
+WF-004,Sales,Summarize sales calls,11.67,991.95,7.59,645.15,800.0,64.0,1.38,581.15,83.1,Automate now,Automate now
+WF-005,Founder Admin,Prepare investor update draft,10.0,850.0,2.5,212.5,6500.0,520.0,999.0,-307.5,38.6,Keep manual,Keep manual for now
+WF-006,Customer Success,Draft customer success check-ins,12.0,1020.0,5.4,459.0,2500.0,200.0,9.65,259.0,68.5,Pilot first,Hire
+WF-007,Customer Success,Onboard new customers,50.0,4250.0,12.5,1062.5,6500.0,520.0,11.98,542.5,70.9,Pilot first,Run AI-assisted pilot
+WF-008,Support,Tag and route support tickets,10.0,850.0,6.5,552.5,800.0,64.0,1.64,488.5,81.5,Automate now,Automate now
+WF-009,Finance,Reconcile contractor invoices,8.0,680.0,3.6,306.0,2500.0,200.0,23.58,106.0,46.1,Document first,Keep manual for now
+WF-010,Hiring,Prepare candidate scorecards,16.0,1360.0,4.0,340.0,6500.0,520.0,999.0,-180.0,45.9,Document first,Keep manual for now
+WF-011,Operations,Update project trackers,15.0,1275.0,9.75,828.75,800.0,64.0,1.05,764.75,73.9,Pilot first,Outsource
+WF-012,Reporting,Generate founder weekly review notes,20.0,1700.0,9.0,765.0,2500.0,200.0,4.42,565.0,67.0,Pilot first,Run AI-assisted pilot
+WF-013,Product Feedback,Analyze churn reasons,24.0,2040.0,6.0,510.0,6500.0,520.0,999.0,-10.0,63.8,Pilot first,Keep manual for now
+WF-014,RevOps,Route inbound leads,6.0,510.0,3.9,331.5,800.0,64.0,2.99,267.5,77.1,Pilot first,Run AI-assisted pilot
+WF-015,Founder Admin,Prepare meeting notes,10.0,850.0,6.5,552.5,800.0,64.0,1.64,488.5,73.2,Pilot first,Automate now
+WF-016,Sales,Build competitor briefs,12.0,1020.0,3.0,255.0,6500.0,520.0,999.0,-265.0,49.9,Document first,Document process first
+WF-017,Operations,Prepare vendor renewal tracker,6.0,510.0,3.9,331.5,800.0,64.0,2.99,267.5,59.2,Document first,Keep manual for now
+WF-018,Support,Create help center article drafts,10.0,850.0,4.5,382.5,2500.0,200.0,13.7,182.5,59.6,Document first,Keep manual for now
+WF-019,Finance,Prepare monthly burn variance notes,6.0,510.0,1.5,127.5,6500.0,520.0,999.0,-392.5,33.9,Keep manual,Keep manual for now
+WF-020,Product Feedback,Summarize feature requests,18.0,1530.0,8.1,688.5,2500.0,200.0,5.12,488.5,72.6,Pilot first,Hire

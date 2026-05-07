@@ -1,0 +1,40 @@
+# Edit this file first when adapting the repo for your company.
+company_name: "Example SeedCo"
+stage: "Seed"
+team_size: 14
+business_model: "B2B SaaS"
+current_ai_maturity: "Ad hoc experiments"
+monthly_burn_sensitivity: "High"
+hiring_constraints: "Need to extend runway before adding non-critical headcount"
+
+preferred_tools:
+  - "Google Workspace"
+  - "HubSpot"
+  - "Notion"
+  - "Linear"
+  - "Slack"
+
+risk_tolerance: "Medium"
+
+sensitive_data_categories:
+  - "customer contracts"
+  - "customer personal data"
+  - "financial records"
+  - "candidate interview notes"
+  - "investor updates"
+
+functions_to_prioritize:
+  - "Sales"
+  - "Customer Success"
+  - "RevOps"
+  - "Reporting"
+
+functions_to_avoid_for_now:
+  - "Finance"
+  - "Hiring"
+
+founder_operating_goals:
+  - "Reduce founder admin load without losing decision quality"
+  - "Free the team from repetitive reporting and CRM cleanup"
+  - "Use AI where it improves customer response time"
+  - "Keep sensitive workflows behind human approval"
