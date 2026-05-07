@@ -23,3 +23,6 @@ def test_roadmap_generation() -> None:
     assert backlog.iloc[0]["backlog_id"] == "AI-001"
     assert "phase" in backlog.columns
     assert backlog["success_metric"].notna().all()
+    pilot_rows = df[df["recommendation"] == "Run AI-assisted pilot"]
+    pilot_backlog = backlog[backlog["workflow_name"].isin(pilot_rows["workflow_name"])]
+    assert set(pilot_backlog["phase"]) == {"Phase 2: AI-assisted pilots"}

@@ -103,8 +103,7 @@ def recommend_workflow(row: pd.Series, company_profile: dict[str, Any]) -> dict[
         }
 
     if (
-        (priority >= 80 or str(row.get("quadrant")) == "Quick wins")
-        and priority >= 60
+        priority >= 80
         and risk <= 50
         and effort <= 55
         and monthly_savings > 400

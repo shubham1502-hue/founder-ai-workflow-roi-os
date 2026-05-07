@@ -6,6 +6,13 @@ Founder AI Workflow ROI OS helps founders use AI where it creates real leverage.
 
 This is an offline-first decision system. It does not require a paid API, does not require an LLM, and does not send your workflow data anywhere. Replace one CSV, edit one YAML file, run one command, and read the roadmap.
 
+In 10 minutes, it turns a messy workflow list into:
+
+- A ranked AI automation ROI scorecard
+- A hire vs automate vs outsource decision table
+- A founder-ready AI ROI memo
+- A 7-day action list for what to automate, pilot, document, hire for, outsource, or leave manual
+
 ## The founder problem
 
 Founders know they should use AI and stay lean, but the hard question is where AI actually creates leverage. Most teams have scattered workflows across sales, customer success, operations, finance, hiring, reporting, product feedback, and founder admin. Some workflows are worth automating. Some need a hire. Some should be outsourced. Some should stay manual.
@@ -67,6 +74,17 @@ After:
 
 ## Quick start
 
+The shortest path is to replace one CSV, edit one YAML file, and run one command.
+
+| Step | File or command | What to do |
+| --- | --- | --- |
+| 1 | `data/sample_workflows.csv` | Replace the sample workflows with your company workflows. |
+| 2 | `config/company_profile.yml` | Edit company stage, team size, risk tolerance, sensitive data, and priority functions. |
+| 3 | `make run` | Generate the scorecard, decisions, backlog, memo, roadmap, and AI policy. |
+| 4 | `outputs/founder_ai_roi_memo.md` | Read this first in the founder operating review. |
+
+Full setup:
+
 1. Fork the repo.
 2. Clone the repo.
 
@@ -90,6 +108,24 @@ make run
 ```
 
 7. Review `outputs/`.
+
+If you only want to see the demo outputs, run:
+
+```bash
+make demo
+```
+
+## Sample demo result
+
+The bundled synthetic data produces a founder-ready recommendation set:
+
+- Automate now: sales call summaries, CRM lifecycle cleanup, and support ticket routing.
+- Pilot first: weekly metrics, customer onboarding, founder weekly review notes, and lead routing.
+- Hire: judgment-heavy customer success, sales follow-up, and product feedback work.
+- Outsource: repetitive project tracker updates.
+- Keep manual or document first: sensitive finance, hiring, investor, and undefined competitor research workflows.
+
+This is the intended shape of the system: not every workflow becomes an AI project.
 
 ## How to fork and use this for your company
 
@@ -164,6 +200,24 @@ The input CSV must include every column below.
 - `outputs/founder_ai_roi_memo.md`: Founder-ready memo for deciding what to do next.
 - `outputs/ai_workflow_roadmap.md`: Phased roadmap for quick wins, pilots, deeper automation, and hiring or outsourcing decisions.
 - `outputs/ai_operating_policy.md`: Guardrails for AI use, human approval, data sensitivity, review cadence, and owner responsibilities.
+
+## How to trust the recommendations
+
+The system is deterministic and explainable:
+
+- ROI assumptions live in `config/scoring_rules.yml`.
+- Scoring weights live in `config/scoring_rules.yml`.
+- Risk tolerance and sensitive data categories live in `config/company_profile.yml`.
+- Each decision includes a recommendation, reason, risks, suggested owner, next step, and confidence.
+- The base workflow does not call an LLM or send data to external tools.
+
+Default ROI assumptions include:
+
+- Blended hourly cost
+- Setup cost for low, medium, and high complexity workflows
+- Monthly maintenance cost percent
+- Automation coverage by complexity
+- Normalization thresholds for time saved, frequency, and error rate
 
 ## Example founder workflow
 

@@ -4,10 +4,12 @@ import pandas as pd
 
 
 def phase_for_recommendation(recommendation: str, quadrant: str) -> str:
-    if recommendation == "Automate now" or quadrant == "Quick wins":
+    if recommendation == "Automate now":
         return "Phase 1: quick wins"
     if recommendation == "Run AI-assisted pilot":
         return "Phase 2: AI-assisted pilots"
+    if recommendation in {"Hire", "Outsource", "Document process first", "Keep manual for now"}:
+        return "Phase 4: hiring or outsourcing decisions"
     if quadrant == "Strategic bets":
         return "Phase 3: deeper automation"
     return "Phase 4: hiring or outsourcing decisions"

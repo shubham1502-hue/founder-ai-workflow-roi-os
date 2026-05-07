@@ -76,6 +76,8 @@ def one_to_five_score(value: Any) -> float:
 
 
 def currency(value: float) -> str:
+    if value < 0:
+        return f"-${abs(value):,.0f}"
     return f"${value:,.0f}"
 
 
