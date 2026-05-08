@@ -160,6 +160,7 @@ Use this repo with the Founder OS ecosystem if you want to connect it to adjacen
 - Use after [founder-retention-expansion-os](https://github.com/shubham1502-hue/founder-retention-expansion-os) if renewal alerts, expansion scoring, churn driver tagging, customer proof workflows, support summaries, or executive touch reminders need automation decisions.
 - Use after [founder-product-feedback-roadmap-os](https://github.com/shubham1502-hue/founder-product-feedback-roadmap-os) if feedback tagging, product signal summaries, roadmap reporting, customer interview synthesis, support issue routing, or roadmap update workflows need automation decisions.
 - Use after [founder-led-sales-call-os](https://github.com/shubham1502-hue/founder-led-sales-call-os) if call summaries, CRM updates, or objection tagging become repetitive.
+- Use before [founder-hiring-talent-pipeline-os](https://github.com/shubham1502-hue/founder-hiring-talent-pipeline-os) when a workflow should become headcount instead of automation, outsourcing, or manual ownership.
 
 ## Lifecycle handoff
 
@@ -180,7 +181,12 @@ This repo produces:
 After:
 
 - [founder-weekly-operating-review-agent](https://github.com/shubham1502-hue/founder-weekly-operating-review-agent) for prioritizing AI work in the weekly review.
+- [founder-hiring-talent-pipeline-os](https://github.com/shubham1502-hue/founder-hiring-talent-pipeline-os) when the decision is to hire.
 - The relevant workflow owner for implementation, hiring, outsourcing, or manual documentation.
+
+## Hiring decision handoff
+
+Founder AI Workflow ROI OS helps decide whether a workflow should be automated, hired for, outsourced, or kept manual. If the decision is to hire, use [Founder Hiring Talent Pipeline OS](https://github.com/shubham1502-hue/founder-hiring-talent-pipeline-os) to define the role, score candidates, structure interviews, recommend trial projects, run reference checks, and create founder-ready hiring decisions.
 
 ## Where this fits in the Founder OS
 
@@ -193,6 +199,7 @@ Use `founder-ai-workflow-roi-os` to decide where AI should create leverage acros
 - Use [founder-customer-onboarding-os](https://github.com/shubham1502-hue/founder-customer-onboarding-os) to track post-sale onboarding health, activation risk, owner gaps, and founder attention accounts.
 - Use [founder-retention-expansion-os](https://github.com/shubham1502-hue/founder-retention-expansion-os) to track post-activation health, renewal risk, expansion readiness, churn drivers, and customer proof opportunities.
 - Use [founder-product-feedback-roadmap-os](https://github.com/shubham1502-hue/founder-product-feedback-roadmap-os) to turn customer signals into roadmap decisions.
+- Use [founder-hiring-talent-pipeline-os](https://github.com/shubham1502-hue/founder-hiring-talent-pipeline-os) when a workflow ROI decision becomes a hiring decision.
 - Use `founder-os` as the umbrella operating system.
 
 Related repos:
@@ -201,6 +208,7 @@ Related repos:
 - [founder-customer-onboarding-os](https://github.com/shubham1502-hue/founder-customer-onboarding-os)
 - [founder-retention-expansion-os](https://github.com/shubham1502-hue/founder-retention-expansion-os)
 - [founder-product-feedback-roadmap-os](https://github.com/shubham1502-hue/founder-product-feedback-roadmap-os)
+- [founder-hiring-talent-pipeline-os](https://github.com/shubham1502-hue/founder-hiring-talent-pipeline-os)
 - [founder-weekly-operating-review-agent](https://github.com/shubham1502-hue/founder-weekly-operating-review-agent)
 - [founder-os-revenue-engine](https://github.com/shubham1502-hue/founder-os-revenue-engine)
 - [founder-led-sales-call-os](https://github.com/shubham1502-hue/founder-led-sales-call-os)
