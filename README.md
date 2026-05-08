@@ -158,6 +158,7 @@ Use this repo with the Founder OS ecosystem if you want to connect it to adjacen
 - Feed AI leverage priorities into [founder-weekly-operating-review-agent](https://github.com/shubham1502-hue/founder-weekly-operating-review-agent).
 - Use after [founder-customer-onboarding-os](https://github.com/shubham1502-hue/founder-customer-onboarding-os) if onboarding summaries, SLA alerts, training reminders, or activation reporting need automation decisions.
 - Use after [founder-retention-expansion-os](https://github.com/shubham1502-hue/founder-retention-expansion-os) if renewal alerts, expansion scoring, churn driver tagging, customer proof workflows, support summaries, or executive touch reminders need automation decisions.
+- Use after [founder-product-feedback-roadmap-os](https://github.com/shubham1502-hue/founder-product-feedback-roadmap-os) if feedback tagging, product signal summaries, roadmap reporting, customer interview synthesis, support issue routing, or roadmap update workflows need automation decisions.
 - Use after [founder-led-sales-call-os](https://github.com/shubham1502-hue/founder-led-sales-call-os) if call summaries, CRM updates, or objection tagging become repetitive.
 
 ## Lifecycle handoff
@@ -191,6 +192,7 @@ Use `founder-ai-workflow-roi-os` to decide where AI should create leverage acros
 - Use `ai-gtm-command-center` for pre-call GTM workflows.
 - Use [founder-customer-onboarding-os](https://github.com/shubham1502-hue/founder-customer-onboarding-os) to track post-sale onboarding health, activation risk, owner gaps, and founder attention accounts.
 - Use [founder-retention-expansion-os](https://github.com/shubham1502-hue/founder-retention-expansion-os) to track post-activation health, renewal risk, expansion readiness, churn drivers, and customer proof opportunities.
+- Use [founder-product-feedback-roadmap-os](https://github.com/shubham1502-hue/founder-product-feedback-roadmap-os) to turn customer signals into roadmap decisions.
 - Use `founder-os` as the umbrella operating system.
 
 Related repos:
@@ -198,6 +200,7 @@ Related repos:
 - [founder-os](https://github.com/shubham1502-hue/founder-os)
 - [founder-customer-onboarding-os](https://github.com/shubham1502-hue/founder-customer-onboarding-os)
 - [founder-retention-expansion-os](https://github.com/shubham1502-hue/founder-retention-expansion-os)
+- [founder-product-feedback-roadmap-os](https://github.com/shubham1502-hue/founder-product-feedback-roadmap-os)
 - [founder-weekly-operating-review-agent](https://github.com/shubham1502-hue/founder-weekly-operating-review-agent)
 - [founder-os-revenue-engine](https://github.com/shubham1502-hue/founder-os-revenue-engine)
 - [founder-led-sales-call-os](https://github.com/shubham1502-hue/founder-led-sales-call-os)
@@ -206,6 +209,8 @@ Related repos:
 If onboarding work becomes repetitive or ops-heavy, use Founder AI Workflow ROI OS to decide whether onboarding summaries, SLA alerts, CRM updates, support tagging, training reminders, or activation reporting should be automated, piloted, hired for, outsourced, or kept manual. Use [Founder Customer Onboarding OS](https://github.com/shubham1502-hue/founder-customer-onboarding-os) as the source workflow when the problem is post-sale onboarding and activation.
 
 If retention work becomes repetitive or ops-heavy, use Founder AI Workflow ROI OS to decide whether renewal alerts, expansion scoring, churn driver tagging, customer proof workflows, support summaries, or executive touch reminders should be automated, piloted, hired for, outsourced, or kept manual. Use [Founder Retention Expansion OS](https://github.com/shubham1502-hue/founder-retention-expansion-os) as the source workflow when the problem is post-activation retention, renewal, expansion, or customer proof.
+
+If product operations become repetitive or ops-heavy, use Founder AI Workflow ROI OS to decide whether feedback tagging, product signal summaries, roadmap reporting, customer interview synthesis, support issue routing, or roadmap update workflows should be automated, piloted, hired for, outsourced, or kept manual. Use [Founder Product Feedback Roadmap OS](https://github.com/shubham1502-hue/founder-product-feedback-roadmap-os) as the source workflow when the problem is customer-signal-to-roadmap prioritization.
 
 ## Input format
 
