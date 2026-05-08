@@ -146,6 +146,40 @@ Non-technical path:
 - Run one command
 - Read one memo
 
+## Standalone or integrated
+
+Standalone:
+Use this repo by itself if you only need to decide which workflows to automate, hire for, outsource, or keep manual. Fork it, replace the sample input, run the workflow or copy the templates, and use the main output in your next founder review.
+
+Integrated:
+Use this repo with the Founder OS ecosystem if you want to connect it to adjacent operating workflows.
+
+- Use when GTM, sales, onboarding, support, finance, reporting, or weekly review work becomes repetitive or ops-heavy.
+- Feed AI leverage priorities into [founder-weekly-operating-review-agent](https://github.com/shubham1502-hue/founder-weekly-operating-review-agent).
+- Use after [founder-customer-onboarding-os](https://github.com/shubham1502-hue/founder-customer-onboarding-os) if onboarding summaries, SLA alerts, training reminders, or activation reporting need automation decisions.
+- Use after [founder-led-sales-call-os](https://github.com/shubham1502-hue/founder-led-sales-call-os) if call summaries, CRM updates, or objection tagging become repetitive.
+
+## Lifecycle handoff
+
+Before:
+
+- [founder-os](https://github.com/shubham1502-hue/founder-os) for choosing the first operating module.
+- A workflow inventory from any function.
+- Pain signals from GTM, sales, onboarding, support, finance, or reporting.
+
+This repo produces:
+
+- AI ROI memo
+- ROI scorecard
+- Hire-vs-automate decisions
+- AI implementation backlog
+- Operating policy
+
+After:
+
+- [founder-weekly-operating-review-agent](https://github.com/shubham1502-hue/founder-weekly-operating-review-agent) for prioritizing AI work in the weekly review.
+- The relevant workflow owner for implementation, hiring, outsourcing, or manual documentation.
+
 ## Where this fits in the Founder OS
 
 Use `founder-ai-workflow-roi-os` to decide where AI should create leverage across the company.
