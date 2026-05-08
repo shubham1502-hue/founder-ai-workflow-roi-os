@@ -154,15 +154,19 @@ Use `founder-ai-workflow-roi-os` to decide where AI should create leverage acros
 - Use `founder-os-revenue-engine` to connect automation work to revenue bottlenecks.
 - Use `founder-led-sales-call-os` for post-call sales intelligence.
 - Use `ai-gtm-command-center` for pre-call GTM workflows.
+- Use [founder-customer-onboarding-os](https://github.com/shubham1502-hue/founder-customer-onboarding-os) to track post-sale onboarding health, activation risk, owner gaps, and founder attention accounts.
 - Use `founder-os` as the umbrella operating system.
 
 Related repos:
 
 - [founder-os](https://github.com/shubham1502-hue/founder-os)
+- [founder-customer-onboarding-os](https://github.com/shubham1502-hue/founder-customer-onboarding-os)
 - [founder-weekly-operating-review-agent](https://github.com/shubham1502-hue/founder-weekly-operating-review-agent)
 - [founder-os-revenue-engine](https://github.com/shubham1502-hue/founder-os-revenue-engine)
 - [founder-led-sales-call-os](https://github.com/shubham1502-hue/founder-led-sales-call-os)
 - [ai-gtm-command-center](https://github.com/shubham1502-hue/ai-gtm-command-center)
+
+If onboarding work becomes repetitive or ops-heavy, use Founder AI Workflow ROI OS to decide whether onboarding summaries, SLA alerts, CRM updates, support tagging, training reminders, or activation reporting should be automated, piloted, hired for, outsourced, or kept manual. Use [Founder Customer Onboarding OS](https://github.com/shubham1502-hue/founder-customer-onboarding-os) as the source workflow when the problem is post-sale onboarding and activation.
 
 ## Input format
 
