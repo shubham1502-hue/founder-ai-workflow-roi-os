@@ -13,6 +13,17 @@ In 10 minutes, it turns a messy workflow list into:
 - A founder-ready AI ROI memo
 - A 7-day action list for what to automate, pilot, document, hire for, outsource, or leave manual
 
+## Start here
+
+| Reader | Open first | Why | CTA |
+| --- | --- | --- | --- |
+| Founder | `outputs/founder_ai_roi_memo.md` | See which workflows are worth automating, piloting, hiring for, outsourcing, or keeping manual. | Pick one workflow to validate this week. |
+| Non-technical operator | `docs/workflow-inventory-template.md` | Map workflows before running any code. | Copy the template and list 5 to 10 recurring workflows. |
+| Technical operator | `config/scoring_rules.yml` | Inspect the scoring and what not to automate. | Run `make demo`, then compare outputs with the rules. |
+| Hiring manager | `outputs/hire_vs_automate_decisions.csv` | See the operating judgment behind hire-vs-automate decisions. | Review the decision table with the AI ROI memo. |
+
+The savings and payback figures are estimates from sample or user-supplied inputs, not confirmed outcomes.
+
 ## The founder problem
 
 Founders know they should use AI and stay lean, but the hard question is where AI actually creates leverage. Most teams have scattered workflows across sales, customer success, operations, finance, hiring, reporting, product feedback, and founder admin. Some workflows are worth automating. Some need a hire. Some should be outsourced. Some should stay manual.
