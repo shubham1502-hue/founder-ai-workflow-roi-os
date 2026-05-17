@@ -34,6 +34,17 @@ For each AI-assisted pilot, define:
 - Human approval rule
 - Success metric
 
+### Weekly AI agent review cadence
+
+If a workflow already has an AI agent or automation layer, review one agent workflow per week.
+
+- Inspect input quality.
+- Inspect execution and handoffs.
+- Review failures and escalations.
+- Check human adoption and trust.
+- Estimate time saved, speed improved, or errors reduced.
+- Decide scale, continue pilot, redesign, add human review, or stop.
+
 ### Thursday: review risk
 
 Open `outputs/ai_operating_policy.md`.

@@ -20,6 +20,7 @@ In 10 minutes, it turns a messy workflow list into:
 | Founder | `outputs/founder_ai_roi_memo.md` | See which workflows are worth automating, piloting, hiring for, outsourcing, or keeping manual. | Pick one workflow to validate this week. |
 | Non-technical operator | `docs/workflow-inventory-template.md` | Map workflows before running any code. | Copy the template and list 5 to 10 recurring workflows. |
 | Technical operator | `config/scoring_rules.yml` | Inspect the scoring and what not to automate. | Run `make demo`, then compare outputs with the rules. |
+| AI-agent operator | `docs/ai-agent-workflow-visibility-map.md` | Inspect input, execution, failure, adoption, ROI, and weekly review layers for an agent workflow. | Map one agent workflow before scaling it. |
 | Hiring manager | `outputs/hire_vs_automate_decisions.csv` | See the operating judgment behind hire-vs-automate decisions. | Review the decision table with the AI ROI memo. |
 
 The savings and payback figures are estimates from sample or user-supplied inputs, not confirmed outcomes.
@@ -137,6 +138,18 @@ The bundled synthetic data produces a founder-ready recommendation set:
 - Keep manual or document first: sensitive finance, hiring, investor, and undefined competitor research workflows.
 
 This is the intended shape of the system: not every workflow becomes an AI project.
+
+## AI Agent Workflow Visibility Map
+
+If a workflow already has an AI agent or automation layer, use the AI Agent Workflow Visibility Map to track what enters the agent, what the agent does, where it fails, whether humans trust it, and whether it creates operating leverage.
+
+Open:
+
+- `docs/ai-agent-workflow-visibility-map.md`
+- `templates/ai_agent_workflow_visibility_map.csv`
+- `examples/ai_agent_workflow_visibility_example.md`
+
+This is useful for teams evaluating AI agents, piloting agent workflows, or trying to connect AI usage to time saved, decision speed, error reduction, and trust.
 
 ## How to fork and use this for your company
 
