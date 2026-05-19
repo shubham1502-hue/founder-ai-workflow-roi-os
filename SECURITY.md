@@ -14,8 +14,10 @@ Do not include secrets, customer data, or private workflow exports in public iss
 
 The base system runs locally and does not call external APIs. Inputs and outputs stay on your machine unless you choose to commit, upload, or connect them to another tool.
 
-Before using this repo with real company data:
+Before using this repo with private company context:
 
-- Remove customer personal data where possible.
+- Do not include proprietary, confidential, customer-identifiable, or sensitive company data in public forks.
+- Use synthetic, anonymized, or public example data only.
+- Remove company names, customer identifiers, internal metrics, credentials, tokens, and operationally sensitive details before sharing examples.
 - Keep finance, legal, hiring, and investor data behind human approval.
 - Review generated outputs before sharing them with any external tool.
