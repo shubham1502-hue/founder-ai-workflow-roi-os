@@ -1,8 +1,8 @@
 # Founder AI Workflow ROI OS
 
-Decide which workflows to automate with AI, which to hire for, which to outsource, and which to leave manual.
+Decision system for founders deciding which workflows deserve AI automation, which need a hire, which can be outsourced, and which should stay manual.
 
-Founder AI Workflow ROI OS helps founders use AI where it creates real leverage. It prevents random AI experimentation by ranking workflows by ROI, risk, payback period, and operating priority. It also helps founders stay lean without blindly avoiding hiring.
+Use this before building an AI agent, buying another AI tool, or opening a role. It prevents random AI experimentation by ranking workflows by ROI, risk, payback period, and operating priority. It also helps founders stay lean without pretending every workflow should become automation.
 
 This is an offline-first decision system. It does not require a paid API, does not require an LLM, and does not send your workflow data anywhere. Replace one CSV, edit one YAML file, run one command, and read the roadmap.
 
@@ -24,6 +24,15 @@ In 10 minutes, it turns a messy workflow list into:
 | Hiring manager | `outputs/hire_vs_automate_decisions.csv` | See the operating judgment behind hire-vs-automate decisions. | Review the decision table with the AI ROI memo. |
 
 The savings and payback figures are estimates from sample or user-supplied inputs, not confirmed outcomes.
+
+## Use this instead of adjacent repos when
+
+| If the operating problem is... | Use this repo | Use the adjacent repo instead when... |
+| --- | --- | --- |
+| Choosing automate, hire, outsource, or keep manual | Yes | Use `founder-hiring-talent-pipeline-os` after the decision is clearly headcount. |
+| Ranking AI workflow opportunities by ROI and risk | Yes | Use `founder-weekly-operating-review-agent` when the weekly operating packet is already the main problem. |
+| Evaluating repetitive post-sale, sales, support, reporting, or finance work | Yes | Use the source workflow repo first if the process itself is not yet defined. |
+| Reviewing whether an AI agent is trusted and visible | Yes | Use `docs/ai-agent-workflow-visibility-map.md` inside this repo. |
 
 ## The founder problem
 
@@ -367,8 +376,8 @@ Built by Shubham Singh, a founder-facing operator focused on RevOps, GTM systems
 
 ## Use this in your company
 
-Fork it, replace the sample inputs with your company context, and run the workflow. Start with the main output listed in the Quick Start section. Keep private data out of public forks.
+Fork it when AI work is being chosen by instinct, hype, or tool demos. Replace `data/sample_workflows.csv`, edit `config/company_profile.yml`, run `make run`, and start with `outputs/founder_ai_roi_memo.md`. Keep private workflow, customer, employee, finance, and vendor data out of public forks.
 
 ## If you are a Founder's Office candidate
 
-Use this repo to understand how a founder-facing operator turns messy inputs into decisions, cadence, and execution artifacts. Fork it, adapt it to a real company example, and write a short case note explaining what changed.
+Use this repo to show operator judgment around AI adoption: workflow triage, risk control, ROI math, human approval, and knowing when the right answer is hiring or documentation instead of automation.
