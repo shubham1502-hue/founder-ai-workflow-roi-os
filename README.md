@@ -23,7 +23,7 @@ In 10 minutes, it turns a messy workflow list into:
 | AI-agent operator | `docs/ai-agent-workflow-visibility-map.md` | Inspect input, execution, failure, adoption, ROI, and weekly review layers for an agent workflow. | Map one agent workflow before scaling it. |
 | Hiring manager | `outputs/hire_vs_automate_decisions.csv` | See the operating judgment behind hire-vs-automate decisions. | Review the decision table with the AI ROI memo. |
 
-The savings and payback figures are estimates from sample or user-supplied inputs, not confirmed outcomes.
+The model estimates released capacity from workflow coverage and a loaded hourly rate. A separate cash scenario uses a documented share of that value that can reduce spending. The bundled synthetic scenario assumes zero cash savings.
 
 ## Use this instead of adjacent repos when
 
@@ -45,8 +45,8 @@ This repo turns workflow chaos into a ranked automation roadmap.
 - Maps company workflows
 - Calculates time spent
 - Estimates monthly cost
-- Estimates AI automation savings
-- Calculates payback period
+- Estimates hours released and their capacity value
+- Calculates capacity payback and cash payback under an explicit spending assumption
 - Scores automation priority
 - Recommends automate vs hire vs outsource vs keep manual
 - Generates an AI implementation backlog
@@ -60,7 +60,7 @@ This repo turns workflow chaos into a ranked automation roadmap.
 - Workflows that need a hire
 - Workflows to outsource
 - Workflows to avoid automating
-- Estimated monthly savings
+- Estimated monthly capacity value and cash scenarios
 - AI implementation roadmap
 - Founder AI ROI memo
 
@@ -280,9 +280,17 @@ The input CSV must include every column below.
 | `requires_human_judgment` | Yes or no. |
 | `current_status` | Documented, partially_documented, ad_hoc, chaotic, or similar status. |
 
+## Read the economics
+
+The existing CSV fields `estimated_monthly_savings`, `net_monthly_savings_after_maintenance`, and `payback_period_months` represent capacity value and capacity-based payback. The prioritization model uses those fields for workflow triage.
+
+Set `cash_realization_fraction` in `config/scoring_rules.yml` between 0 and 1 when a budget owner can tie released time to an avoidable cost. Modeled gross cash savings equal gross capacity value times that fraction. Deduct recurring maintenance to get net monthly cash flow. Cash payback is setup cost divided by positive monthly net cash flow. A blank cash payback field indicates that the scenario has no positive recurring cash flow.
+
+The scorecard also reports the cash realization fraction needed for a 12-month payback under steady monthly economics. Values over 1 indicate a 12-month payback would require higher benefit or lower cost. Try different workflow coverage, cash realization, and maintenance assumptions before funding a pilot.
+
 ## Output files
 
-- `outputs/workflow_roi_scorecard.csv`: ROI math, savings, payback period, priority score, score band, and recommendation.
+- `outputs/workflow_roi_scorecard.csv`: Capacity value, estimated cash flows and payback, priority score, and recommendation.
 - `outputs/automation_priority_matrix.csv`: Impact, effort, risk, quadrant, and recommended timing.
 - `outputs/hire_vs_automate_decisions.csv`: Recommendation, reason, risks, owner, next step, and confidence.
 - `outputs/ai_implementation_backlog.csv`: Action backlog grouped into implementation phases.

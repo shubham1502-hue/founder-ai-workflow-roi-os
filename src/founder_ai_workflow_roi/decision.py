@@ -64,7 +64,7 @@ def recommend_workflow(row: pd.Series, company_profile: dict[str, Any]) -> dict[
     impact = safe_float(row.get("impact_score"))
     effort = safe_float(row.get("effort_score"))
     risk = safe_float(row.get("risk_score"))
-    monthly_savings = safe_float(row.get("net_monthly_savings_after_maintenance"))
+    monthly_capacity_value = safe_float(row.get("net_monthly_savings_after_maintenance"))
     human_judgment = bool(row.get("requires_human_judgment"))
     business_impact = safe_float(row.get("business_impact"))
     customer_impact = safe_float(row.get("customer_impact"))
@@ -92,7 +92,7 @@ def recommend_workflow(row: pd.Series, company_profile: dict[str, Any]) -> dict[
             "decision_confidence": 0.72,
         }
 
-    if impact <= 65 and monthly_savings > 500 and risk <= 55 and not human_judgment:
+    if impact <= 65 and monthly_capacity_value > 500 and risk <= 55 and not human_judgment:
         return {
             "recommendation": "Outsource",
             "reason": "The work is repetitive and not strategically important enough to own internally yet.",
@@ -106,18 +106,18 @@ def recommend_workflow(row: pd.Series, company_profile: dict[str, Any]) -> dict[
         priority >= 80
         and risk <= 50
         and effort <= 55
-        and monthly_savings > 400
+        and monthly_capacity_value > 400
     ):
         return {
             "recommendation": "Automate now",
-            "reason": "The workflow has strong savings potential, frequent repetition, and manageable risk.",
+            "reason": "The workflow has strong capacity value, frequent repetition, and manageable risk.",
             "risks": "Monitor quality drift and keep a human approval checkpoint during rollout.",
             "suggested_owner": owner,
             "next_step": "Build a narrow automation for the highest-volume path and measure time saved.",
             "decision_confidence": 0.86,
         }
 
-    if priority >= 60 and impact >= 55 and risk <= 70 and monthly_savings > 0:
+    if priority >= 60 and impact >= 55 and risk <= 70 and monthly_capacity_value > 0:
         return {
             "recommendation": "Run AI-assisted pilot",
             "reason": "The upside is meaningful, but the workflow needs validation before full automation.",

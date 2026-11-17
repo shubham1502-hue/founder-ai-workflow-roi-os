@@ -21,6 +21,11 @@ SCORECARD_COLUMNS = [
     "estimated_monthly_maintenance_cost",
     "payback_period_months",
     "net_monthly_savings_after_maintenance",
+    "cash_realization_fraction",
+    "estimated_monthly_cash_savings",
+    "net_monthly_cash_flow",
+    "cash_payback_months",
+    "cash_fraction_for_12mo_payback",
     "priority_score",
     "roi_category",
     "recommendation",
@@ -59,16 +64,16 @@ def _section_from_filter(df: pd.DataFrame, title: str, recommendations: set[str]
         return "\n".join(lines)
     for _, row in subset.head(limit).iterrows():
         lines.append(
-            f"- {row['workflow_name']} ({row['function']}): {row['recommendation']}; "
-            f"score {row['priority_score']:.1f}; estimated savings "
-            f"{currency(row['net_monthly_savings_after_maintenance'])}/month."
+            f"- {row['workflow_name']} ({row['function']}). {row['recommendation']}. "
+            f"Score {row['priority_score']:.1f}. Net monthly capacity value "
+            f"{currency(row['net_monthly_savings_after_maintenance'])}."
         )
     return "\n".join(lines)
 
 
 def render_memo(df: pd.DataFrame, company_profile: dict[str, Any]) -> str:
     company_name = company_profile.get("company_name", "Your company")
-    total_savings = df["net_monthly_savings_after_maintenance"].clip(lower=0).sum()
+    net_capacity_value = df["net_monthly_savings_after_maintenance"].sum()
     automate_now = df[df["recommendation"] == "Automate now"]
     pilot = df[df["recommendation"] == "Run AI-assisted pilot"]
     hire = df[df["recommendation"] == "Hire"]
@@ -86,7 +91,8 @@ def render_memo(df: pd.DataFrame, company_profile: dict[str, Any]) -> str:
         (
             f"{company_name} has {len(df)} mapped workflows. The current workflow inventory shows "
             f"{fmt_number(df['monthly_hours_spent'].sum())} monthly team hours and "
-            f"{currency(total_savings)} in potential monthly savings after estimated maintenance costs."
+            f"{currency(net_capacity_value)} in modeled monthly capacity value after maintenance "
+            "across the mapped workflows."
         ),
         (
             f"The strongest near-term path is to automate {automate_count} {automate_word} now, "
@@ -114,11 +120,18 @@ def render_memo(df: pd.DataFrame, company_profile: dict[str, Any]) -> str:
     lines.extend(
         [
             "",
-            "## Estimated monthly savings",
+            "## Capacity value and cash scenario",
             "",
-            f"- Gross estimated AI-assisted savings: {currency(df['estimated_monthly_savings'].sum())}/month.",
-            f"- Estimated maintenance cost: {currency(df['estimated_monthly_maintenance_cost'].sum())}/month.",
-            f"- Net estimated savings after maintenance: {currency(total_savings)}/month.",
+            f"- Modeled hours released per month {fmt_number(df['estimated_hours_saved'].sum())}.",
+            f"- Gross monthly capacity value {currency(df['estimated_monthly_savings'].sum())}.",
+            f"- Modeled monthly maintenance cost {currency(df['estimated_monthly_maintenance_cost'].sum())}.",
+            f"- Net monthly capacity value {currency(net_capacity_value)}.",
+            f"- Monthly cash savings under the configured assumption {currency(df['estimated_monthly_cash_savings'].sum())}.",
+            f"- Net monthly cash flow under that assumption {currency(df['net_monthly_cash_flow'].sum())}.",
+            "",
+            "These figures aggregate the per-workflow scenarios. Check shared work and overlapping "
+            "costs before treating them as a combined plan. For a spending decision, confirm the "
+            "budget line or vendor payment that can be reduced and review the cash payback field.",
             "",
             "## Recommended next 7-day actions",
             "",
@@ -157,8 +170,8 @@ def render_roadmap(df: pd.DataFrame, backlog: pd.DataFrame) -> str:
             "## Metrics to track",
             "",
             "- Monthly hours saved by workflow.",
-            "- Net monthly savings after maintenance.",
-            "- Payback period by automation.",
+            "- Net capacity value and documented reductions in cash spending.",
+            "- Cash payback for workflows with positive net monthly cash flow.",
             "- Error rate before and after rollout.",
             "- Human approval exceptions.",
             "- Workflow owner satisfaction.",

@@ -7,6 +7,9 @@ import pandas as pd
 from founder_ai_workflow_roi.utils import level_to_number, safe_float
 
 
+CASH_PAYBACK_HORIZON_MONTHS = 12
+
+
 def infer_complexity(row: pd.Series) -> str:
     risk_points = 0
     risk_points += level_to_number(row.get("data_sensitivity"), default=2)
@@ -57,6 +60,10 @@ def calculate_roi(df: pd.DataFrame, scoring_rules: dict[str, Any]) -> pd.DataFra
     hourly_cost = safe_float(assumptions.get("blended_hourly_cost"), 75.0)
     maintenance_percent = safe_float(assumptions.get("default_maintenance_cost_percent"), 0.12)
 
+    cash_fraction = float(assumptions.get("cash_realization_fraction", 0.0))
+    if not 0 <= cash_fraction <= 1:
+        raise ValueError("cash_realization_fraction must be between 0 and 1.")
+
     enriched = df.copy()
     enriched["monthly_hours_spent"] = (
         enriched["frequency_per_month"]
@@ -98,4 +105,21 @@ def calculate_roi(df: pd.DataFrame, scoring_rules: dict[str, Any]) -> pd.DataFra
         ),
         axis=1,
     )
+    # Legacy savings and payback fields measure the value of time released.
+    # The cash scenario uses an explicit assumption about avoidable spending.
+    enriched["cash_realization_fraction"] = cash_fraction
+    capacity_value = enriched["estimated_monthly_savings"]
+    maintenance = enriched["estimated_monthly_maintenance_cost"]
+    setup = enriched["estimated_setup_cost"]
+    cash_saved = (capacity_value * cash_fraction).round(2)
+    net_cash_flow = (cash_saved - maintenance).round(2)
+    enriched["estimated_monthly_cash_savings"] = cash_saved
+    enriched["net_monthly_cash_flow"] = net_cash_flow
+    enriched["cash_payback_months"] = (
+        setup.div(net_cash_flow.where(net_cash_flow > 0))
+    ).round(2)
+    enriched["cash_fraction_for_12mo_payback"] = (
+        (maintenance + setup / CASH_PAYBACK_HORIZON_MONTHS)
+        .div(capacity_value.where(capacity_value > 0))
+    ).round(4)
     return enriched

@@ -21,6 +21,7 @@ assumptions:
   default_setup_cost_medium: 2500
   default_setup_cost_high: 6500
   default_maintenance_cost_percent: 0.08
+  cash_realization_fraction: 0.0
   automation_coverage_by_complexity:
     low: 0.65
     medium: 0.45

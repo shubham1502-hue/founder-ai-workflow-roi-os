@@ -32,8 +32,8 @@
 ## Metrics to track
 
 - Monthly hours saved by workflow.
-- Net monthly savings after maintenance.
-- Payback period by automation.
+- Net capacity value and documented reductions in cash spending.
+- Cash payback for workflows with positive net monthly cash flow.
 - Error rate before and after rollout.
 - Human approval exceptions.
 - Workflow owner satisfaction.

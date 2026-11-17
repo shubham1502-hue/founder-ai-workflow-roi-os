@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+import pandas as pd
+import pytest
+
 from founder_ai_workflow_roi.config import load_scoring_rules
 from founder_ai_workflow_roi.ingest import load_workflows
 from founder_ai_workflow_roi.roi import calculate_payback_period, calculate_roi
@@ -20,3 +23,29 @@ def test_monthly_hours_and_savings_calculation() -> None:
 def test_payback_period_calculation() -> None:
     assert calculate_payback_period(1000, 500) == 2.0
     assert calculate_payback_period(1000, 0) == 999.0
+
+
+def test_cash_payback_uses_explicit_spending_assumption():
+    rules = load_scoring_rules("config/scoring_rules.yml")
+    df = load_workflows("data/sample_workflows.csv").head(1)
+
+    default = calculate_roi(df, rules).iloc[0]
+    assert default["estimated_monthly_cash_savings"] == 0
+    assert default["net_monthly_cash_flow"] == -default["estimated_monthly_maintenance_cost"]
+    assert pd.isna(default["cash_payback_months"])
+
+    rules["assumptions"]["cash_realization_fraction"] = 1.0
+    full = calculate_roi(df, rules).iloc[0]
+    assert full["estimated_monthly_cash_savings"] == full["estimated_monthly_savings"]
+    assert full["net_monthly_cash_flow"] == full["net_monthly_savings_after_maintenance"]
+    assert full["cash_payback_months"] == full["payback_period_months"]
+    expected = (full["estimated_monthly_maintenance_cost"] + full["estimated_setup_cost"] / 12)
+    assert full["cash_fraction_for_12mo_payback"] == pytest.approx(expected / full["estimated_monthly_savings"], abs=0.00005)
+
+
+def test_cash_realization_fraction_is_bounded():
+    rules = load_scoring_rules("config/scoring_rules.yml")
+    rules["assumptions"]["cash_realization_fraction"] = 1.01
+    df = load_workflows("data/sample_workflows.csv").head(1)
+    with pytest.raises(ValueError, match="cash_realization_fraction"):
+        calculate_roi(df, rules)

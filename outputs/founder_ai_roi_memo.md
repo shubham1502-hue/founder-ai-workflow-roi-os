@@ -2,41 +2,41 @@
 
 ## Executive summary
 
-Example SeedCo has 20 mapped workflows. The current workflow inventory shows 297.2 monthly team hours and $6,817 in potential monthly savings after estimated maintenance costs.
+Example SeedCo has 20 mapped workflows. The current workflow inventory shows 297.2 monthly team hours and $5,662 in modeled monthly capacity value after maintenance across the mapped workflows.
 The strongest near-term path is to automate 3 workflows now, run 5 AI-assisted pilots, and keep high-risk work behind human approval.
 
 ## Best workflows to automate now
 
-- Summarize sales calls (Sales): Automate now; score 83.1; estimated savings $581/month.
-- Clean CRM lifecycle stages (RevOps): Automate now; score 82.3; estimated savings $820/month.
-- Tag and route support tickets (Support): Automate now; score 81.5; estimated savings $488/month.
+- Summarize sales calls (Sales). Automate now. Score 83.1. Net monthly capacity value $581.
+- Clean CRM lifecycle stages (RevOps). Automate now. Score 82.3. Net monthly capacity value $820.
+- Tag and route support tickets (Support). Automate now. Score 81.5. Net monthly capacity value $488.
 
 ## Workflows to pilot first
 
-- Route inbound leads (RevOps): Run AI-assisted pilot; score 77.1; estimated savings $268/month.
-- Prepare meeting notes (Founder Admin): Run AI-assisted pilot; score 73.2; estimated savings $488/month.
-- Compile weekly metrics pack (Reporting): Run AI-assisted pilot; score 71.2; estimated savings $718/month.
-- Onboard new customers (Customer Success): Run AI-assisted pilot; score 70.9; estimated savings $542/month.
-- Generate founder weekly review notes (Reporting): Run AI-assisted pilot; score 67.0; estimated savings $565/month.
+- Route inbound leads (RevOps). Run AI-assisted pilot. Score 77.1. Net monthly capacity value $268.
+- Prepare meeting notes (Founder Admin). Run AI-assisted pilot. Score 73.2. Net monthly capacity value $488.
+- Compile weekly metrics pack (Reporting). Run AI-assisted pilot. Score 71.2. Net monthly capacity value $718.
+- Onboard new customers (Customer Success). Run AI-assisted pilot. Score 70.9. Net monthly capacity value $542.
+- Generate founder weekly review notes (Reporting). Run AI-assisted pilot. Score 67.0. Net monthly capacity value $565.
 
 ## Workflows that need a hire
 
-- Summarize feature requests (Product Feedback): Hire; score 72.6; estimated savings $488/month.
-- Draft customer success check-ins (Customer Success): Hire; score 68.5; estimated savings $259/month.
-- Draft post-demo follow-up emails (Sales): Hire; score 66.4; estimated savings $278/month.
+- Summarize feature requests (Product Feedback). Hire. Score 72.6. Net monthly capacity value $488.
+- Draft customer success check-ins (Customer Success). Hire. Score 68.5. Net monthly capacity value $259.
+- Draft post-demo follow-up emails (Sales). Hire. Score 66.4. Net monthly capacity value $278.
 
 ## Workflows to outsource
 
-- Update project trackers (Operations): Outsource; score 73.9; estimated savings $765/month.
+- Update project trackers (Operations). Outsource. Score 73.9. Net monthly capacity value $765.
 
 ## Workflows to keep manual
 
-- Analyze churn reasons (Product Feedback): Keep manual for now; score 63.8; estimated savings -$10/month.
-- Create help center article drafts (Support): Keep manual for now; score 59.6; estimated savings $182/month.
-- Prepare vendor renewal tracker (Operations): Keep manual for now; score 59.2; estimated savings $268/month.
-- Build competitor briefs (Sales): Document process first; score 49.9; estimated savings -$265/month.
-- Reconcile contractor invoices (Finance): Keep manual for now; score 46.1; estimated savings $106/month.
-- Prepare candidate scorecards (Hiring): Keep manual for now; score 45.9; estimated savings -$180/month.
+- Analyze churn reasons (Product Feedback). Keep manual for now. Score 63.8. Net monthly capacity value -$10.
+- Create help center article drafts (Support). Keep manual for now. Score 59.6. Net monthly capacity value $182.
+- Prepare vendor renewal tracker (Operations). Keep manual for now. Score 59.2. Net monthly capacity value $268.
+- Build competitor briefs (Sales). Document process first. Score 49.9. Net monthly capacity value -$265.
+- Reconcile contractor invoices (Finance). Keep manual for now. Score 46.1. Net monthly capacity value $106.
+- Prepare candidate scorecards (Hiring). Keep manual for now. Score 45.9. Net monthly capacity value -$180.
 
 ## Biggest risks
 
@@ -46,11 +46,16 @@ The strongest near-term path is to automate 3 workflows now, run 5 AI-assisted p
 - Analyze churn reasons (Product Feedback): risk score 68.0; Manual drag can grow if volume increases, so revisit when frequency or pain changes.
 - Onboard new customers (Customer Success): risk score 68.0; Pilot outputs may vary until examples, guardrails, and approval rules are explicit.
 
-## Estimated monthly savings
+## Capacity value and cash scenario
 
-- Gross estimated AI-assisted savings: $10,630/month.
-- Estimated maintenance cost: $4,968/month.
-- Net estimated savings after maintenance: $6,817/month.
+- Modeled hours released per month 125.1.
+- Gross monthly capacity value $10,630.
+- Modeled monthly maintenance cost $4,968.
+- Net monthly capacity value $5,662.
+- Monthly cash savings under the configured assumption $0.
+- Net monthly cash flow under that assumption -$4,968.
+
+These figures aggregate the per-workflow scenarios. Check shared work and overlapping costs before treating them as a combined plan. For a spending decision, confirm the budget line or vendor payment that can be reduced and review the cash payback field.
 
 ## Recommended next 7-day actions
 
